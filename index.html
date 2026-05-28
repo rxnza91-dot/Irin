@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -9,21 +10,13 @@
 
 <style>
 :root{
---bg:#FFF7F8;
---main:#E7A9B5;
---dark:#B57C8A;
+--bg:#FFF9FA;
+--main:#EBC4CD;
+--dark:#B98A96;
 --white:#FFFFFF;
---glow:rgba(231,169,181,0.35);
---accent:#FFE3EA;
---status-red:#FF9DB2;
-
---header-gradient:
-linear-gradient(
-135deg,
-#F8D7DA,
-#FBE4E8,
-#FFF5F7
-);
+--glow:rgba(235,196,205,0.25);
+--accent:#FFF1F4;
+--status-red:#F5AFC0;
 }
 
 *{
@@ -34,7 +27,7 @@ font-family:'Mitr',sans-serif;
 }
 
 body{
-background:linear-gradient(to bottom,#FFF7F8,#FFFDFD);
+background:linear-gradient(to bottom,#FFF9FA,#FFFCFD);
 display:flex;
 justify-content:center;
 position:relative;
@@ -77,12 +70,12 @@ z-index:1;
 }
 
 .section{
-background:rgba(255,255,255,0.92);
+background:rgba(255,255,255,0.95);
 border-radius:20px;
 padding:25px 20px;
 margin-bottom:20px;
-border:2px solid #F6D6DD;
-box-shadow:0 10px 24px rgba(231,169,181,0.10);
+border:2px solid #F6E2E7;
+box-shadow:0 8px 20px rgba(235,196,205,0.08);
 }
 
 h1,h2,h3{
@@ -91,27 +84,6 @@ color:var(--dark);
 
 .center{
 text-align:center;
-}
-
-/* HEADER */
-.header-section{
-background:var(--header-gradient) !important;
-border:none !important;
-box-shadow:
-0 10px 30px rgba(231,169,181,0.16),
-0 4px 12px rgba(255,255,255,0.6) !important;
-position:relative;
-overflow:hidden;
-}
-
-.header-section::before{
-content:"";
-position:absolute;
-inset:0;
-background:
-radial-gradient(circle at top left, rgba(255,255,255,0.45), transparent 45%),
-radial-gradient(circle at bottom right, rgba(255,255,255,0.35), transparent 45%);
-pointer-events:none;
 }
 
 /* --- โลโก้และอิโมจิรอบโลโก้ --- */
@@ -130,7 +102,7 @@ width:150px;
 height:150px;
 border-radius:50%;
 overflow:hidden;
-box-shadow:0 8px 22px rgba(231,169,181,0.22);
+box-shadow:0 8px 20px rgba(235,196,205,0.16);
 border:4px solid var(--white);
 position:relative;
 z-index:2;
@@ -159,29 +131,6 @@ opacity:1;
 }
 }
 
-/* ชื่อร้าน */
-.store-title{
-font-size:2.35rem;
-font-weight:500;
-letter-spacing:1px;
-color:#C98796;
-text-shadow:
-0 2px 10px rgba(255,255,255,0.7),
-0 2px 8px rgba(201,135,150,0.18);
-line-height:1.1;
-}
-
-/* subtitle */
-.store-subtitle{
-color:#B98592;
-opacity:.95;
-margin:14px 0 22px;
-font-size:15px;
-letter-spacing:.5px;
-line-height:1.9;
-padding:0 8px;
-}
-
 .badges{
 display:flex;
 flex-wrap:wrap;
@@ -191,13 +140,13 @@ margin-bottom:20px;
 }
 
 .badge{
-background:#FFFDFD;
+background:#FFFFFF;
 padding:8px 16px;
 border-radius:25px;
-box-shadow:0 4px 12px rgba(231,169,181,0.10);
+box-shadow:0 3px 10px rgba(235,196,205,0.08);
 font-size:13px;
-color:#B57C8A;
-border:1px solid #F5D6DE;
+color:#B98A96;
+border:1px solid #F2DCE2;
 }
 
 .btn{
@@ -217,8 +166,8 @@ gap:8px;
 
 .btn-outline{
 background:#FFFDFD;
-border:2px dashed #E7A9B5;
-color:#B57C8A;
+border:2px dashed #EBC4CD;
+color:#B98A96;
 }
 
 .status-dot{
@@ -247,8 +196,14 @@ transform:scale(1);
 }
 
 .btn-main{
-background:linear-gradient(135deg,#E7A9B5,#F2C7D0);
+background:linear-gradient(135deg,#EBC4CD,#F5D9E0);
 color:#fff;
+font-size:16px;
+font-weight:500;
+padding:16px 20px;
+box-shadow:
+0 8px 20px rgba(235,196,205,0.12),
+0 0 10px rgba(255,255,255,0.5);
 }
 
 .step{
@@ -258,12 +213,12 @@ gap:14px;
 margin-bottom:18px;
 padding:14px 12px;
 border-radius:18px;
-background:#FFF9FA;
-border:1px solid #F7DCE2;
+background:#FFFDFD;
+border:1px solid #F5E3E7;
 }
 
 .step-num{
-background:linear-gradient(135deg,#E7A9B5,#F2C7D0);
+background:linear-gradient(135deg,#EBC4CD,#F5D9E0);
 color:#fff;
 width:34px;
 height:34px;
@@ -275,35 +230,36 @@ font-size:15px;
 font-weight:600;
 flex-shrink:0;
 margin-top:2px;
-box-shadow:0 6px 14px rgba(231,169,181,0.18);
+box-shadow:0 4px 12px rgba(235,196,205,0.14);
 }
 
 .step div:last-child{
 line-height:1.8;
 font-size:14px;
-color:#444;
+color:#555;
 word-break:break-word;
 }
 
+/* PRICE */
 .price-row{
 display:flex;
 justify-content:space-between;
 align-items:center;
 margin-bottom:10px;
-background:#F4C8D2;
+background:#FCECEF;
 padding:10px 15px;
 border-radius:15px;
-border-left:4px solid #D98FA2;
-box-shadow:0 4px 10px rgba(217,143,162,0.15);
+border-left:4px solid #DDA8B4;
+box-shadow:0 3px 8px rgba(221,168,180,0.08);
 }
 
 .price-row span{
-color:#8C5A67;
+color:#9F7580;
 font-weight:500;
 }
 
 .price-tag{
-background:#D98FA2;
+background:#DDA8B4;
 color:#fff;
 padding:3px 12px;
 border-radius:20px;
@@ -329,11 +285,11 @@ max-width:100px;
 text-align:center;
 padding:8px;
 border-radius:25px;
-background:#FFFDFD;
+background:#FFFFFF;
 text-decoration:none;
-color:#B57C8A;
+color:#B98A96;
 font-size:13px;
-border:1px solid #F3D7DE;
+border:1px solid #F3E0E5;
 }
 
 .small{
@@ -343,14 +299,29 @@ margin-top:10px;
 }
 
 .rule-box{
-background:#FFF7F8;
+background:#FFF8FA;
 padding:15px;
 border-radius:15px;
 font-size:14px;
 margin-top:15px;
-border:1px dashed #E7A9B5;
-color:#9D6E79;
+border:1px dashed #EBC4CD;
+color:#A77D88;
 line-height:1.8;
+}
+
+.store-title{
+font-size:2.35rem;
+font-weight:500;
+letter-spacing:1px;
+color:#C795A2;
+}
+
+.store-subtitle{
+color:#B98A96;
+opacity:.95;
+margin:14px 0 22px;
+font-size:15px;
+line-height:1.9;
 }
 </style>
 </head>
@@ -367,7 +338,7 @@ line-height:1.8;
 
 <div class="container">
 
-<div class="section center header-section">
+<div class="section center" style="border:none;box-shadow:none;background:transparent;">
 
 <div class="logo-wrapper">
 <span class="logo-deco" style="top: 0; left: 10%;">🛼</span>
@@ -375,7 +346,7 @@ line-height:1.8;
 <span class="logo-deco" style="top: 20%; right: 0%;">⭐️</span>
 
 <div class="logo">
-<img src="att.be82oFQlt5Q154biR3LCzBXlgJKcQ_gDr4r5yDftOug.jpeg" alt="wish uwu logo">
+<img src="att.be82oFQlt5Q154biR3LCzBXlgJKcQ_gDr4r5yDftOug.jpeg" alt="logo">
 </div>
 </div>
 
@@ -477,4 +448,4 @@ line-height:1.8;
 <div class="socials">
 <a href="https://www.facebook.com/rin.taw.xwn.rin.phid.trng.hin?">Facebook</a>
 <a href="https://lin.ee/Pmkmt0v">Line Official</a>
-<a href="https://drive.google.com/drive/folders/1iTua1B5bVV9VZ6FXwR
+<a href="https://drive.google.com/drive/folders/1iTu
