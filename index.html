@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irin - Official Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 :root{
 --bg:#FFF7F8;
@@ -33,7 +42,7 @@ overflow-x:hidden;
 min-height:100vh;
 }
 
-/* พื้นหลังอิโมจิ */
+/* --- พื้นหลังอิโมจิฟุ้งๆ --- */
 .bg-emojis{
 position:fixed;
 top:0;
@@ -105,7 +114,7 @@ radial-gradient(circle at bottom right, rgba(255,255,255,0.35), transparent 45%)
 pointer-events:none;
 }
 
-/* โลโก้ */
+/* --- โลโก้และอิโมจิรอบโลโก้ --- */
 .logo-wrapper{
 position:relative;
 width:200px;
@@ -121,10 +130,10 @@ width:150px;
 height:150px;
 border-radius:50%;
 overflow:hidden;
+box-shadow:0 8px 22px rgba(231,169,181,0.22);
 border:4px solid var(--white);
 position:relative;
 z-index:2;
-box-shadow:0 8px 22px rgba(231,169,181,0.22);
 }
 
 .logo img{
@@ -170,11 +179,9 @@ margin:14px 0 22px;
 font-size:15px;
 letter-spacing:.5px;
 line-height:1.9;
-text-shadow:0 2px 8px rgba(0,0,0,0.08);
 padding:0 8px;
 }
 
-/* badges */
 .badges{
 display:flex;
 flex-wrap:wrap;
@@ -193,12 +200,8 @@ color:#B57C8A;
 border:1px solid #F5D6DE;
 }
 
-/* buttons */
 .btn{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:8px;
+display:block;
 text-align:center;
 padding:14px;
 border-radius:25px;
@@ -206,6 +209,10 @@ text-decoration:none;
 margin-top:15px;
 font-weight:500;
 transition:0.3s;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
 }
 
 .btn-outline{
@@ -214,12 +221,6 @@ border:2px dashed #E7A9B5;
 color:#B57C8A;
 }
 
-.btn-main{
-background:linear-gradient(135deg,#E7A9B5,#F2C7D0);
-color:#fff;
-}
-
-/* status */
 .status-dot{
 width:10px;
 height:10px;
@@ -245,7 +246,11 @@ transform:scale(1);
 }
 }
 
-/* step */
+.btn-main{
+background:linear-gradient(135deg,#E7A9B5,#F2C7D0);
+color:#fff;
+}
+
 .step{
 display:flex;
 align-items:flex-start;
@@ -280,7 +285,6 @@ color:#444;
 word-break:break-word;
 }
 
-/* PRICE ROW */
 .price-row{
 display:flex;
 justify-content:space-between;
@@ -307,37 +311,9 @@ font-size:14px;
 white-space:nowrap;
 }
 
-/* rule */
-.rule-box{
-background:#FFF7F8;
-padding:15px;
-border-radius:15px;
-font-size:14px;
-margin-top:15px;
-border:1px dashed #E7A9B5;
-color:#9D6E79;
-line-height:1.8;
-}
-
-/* footer */
 .footer{
 text-align:center;
 margin-top:30px;
-}
-
-.footer .btn-main{
-background:linear-gradient(135deg,#E7A9B5,#F0C3CD);
-color:#fff;
-font-size:16px;
-font-weight:500;
-padding:16px 20px;
-border-radius:28px;
-box-shadow:
-0 10px 24px rgba(231,169,181,0.18),
-0 0 12px rgba(255,255,255,0.5);
-transform:scale(1.02);
-transition:0.3s ease;
-border:2px solid rgba(255,255,255,0.8);
 }
 
 .socials{
@@ -365,9 +341,22 @@ font-size:12px;
 opacity:.7;
 margin-top:10px;
 }
-</style>
 
-<!-- พื้นหลังอิโมจิ -->
+.rule-box{
+background:#FFF7F8;
+padding:15px;
+border-radius:15px;
+font-size:14px;
+margin-top:15px;
+border:1px dashed #E7A9B5;
+color:#9D6E79;
+line-height:1.8;
+}
+</style>
+</head>
+
+<body>
+
 <div class="bg-emojis">
 <span class="floating-emoji" style="left: 10%; animation-delay: 0s;">🛼</span>
 <span class="floating-emoji" style="left: 25%; animation-delay: 2s;">👚</span>
@@ -378,7 +367,6 @@ margin-top:10px;
 
 <div class="container">
 
-<!-- HEADER -->
 <div class="section center header-section">
 
 <div class="logo-wrapper">
@@ -387,7 +375,7 @@ margin-top:10px;
 <span class="logo-deco" style="top: 20%; right: 0%;">⭐️</span>
 
 <div class="logo">
-<img src="att.be82oFQlt5Q154biR3LCzBXlgJKcQ_gDr4r5yDftOug.jpeg" alt="logo">
+<img src="att.be82oFQlt5Q154biR3LCzBXlgJKcQ_gDr4r5yDftOug.jpeg" alt="wish uwu logo">
 </div>
 </div>
 
@@ -411,7 +399,6 @@ margin-top:10px;
 
 </div>
 
-<!-- STEP -->
 <div class="section">
 
 <h2>📝 ขั้นตอนการสั่งป้าย</h2>
@@ -424,7 +411,7 @@ margin-top:10px;
 <div class="step">
 <div class="step-num">2</div>
 <div>
-แจ้งประเภทป้าย บล็อก ตัวตูน ที่เลือก<br>
+แจ้งประเภทป้าย บล็อก ตัวตูน ที่เลือก
 พร้อมบอกข้อความที่ต้องการใส่ในป้าย
 </div>
 </div>
@@ -449,7 +436,6 @@ margin-top:10px;
 
 </div>
 
-<!-- PRICE -->
 <div class="section">
 
 <h2>💰 เมนูราคางาน</h2>
@@ -482,7 +468,6 @@ margin-top:10px;
 
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
 
 <a href="https://line.me/ti/p/malglwbPc2" class="btn btn-main">
@@ -492,4 +477,4 @@ margin-top:10px;
 <div class="socials">
 <a href="https://www.facebook.com/rin.taw.xwn.rin.phid.trng.hin?">Facebook</a>
 <a href="https://line.me/ti/p/malglwbPc2">Line Official</a>
-<a href="https://drive.google.com/drive/folders/1iTua
+<a href="https://drive.google.com/drive/folders/1iTua1B5bVV9VZ6FXwR
