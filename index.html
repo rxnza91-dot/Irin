@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -9,13 +10,15 @@
 
 <style>
 :root{
---bg:#F8FFFA;
---main:#F6C9D4;
---dark:#8FAF9D;
+--bg:#FAFFFC;
+--main:#F4C9D4;
+--dark:#6F8F7B;
 --white:#FFFFFF;
---glow:rgba(246,201,212,0.22);
---accent:#EEF9F1;
---status-red:#F6B8C7;
+--glow:rgba(244,201,212,0.22);
+--accent:#F3FFF7;
+--status-red:#F6AFC3;
+--mint:#DDEFE5;
+--text:#5F7167;
 }
 
 *{
@@ -27,13 +30,18 @@ font-family:'Mitr',sans-serif;
 
 body{
 background:
-linear-gradient(to bottom,#FDFEFE,#F7FFF9,#FFF8FA);
+linear-gradient(
+to bottom,
+#FFFDFD,
+#F8FFF9,
+#FFF7FA
+);
 display:flex;
 justify-content:center;
 position:relative;
 overflow-x:hidden;
 min-height:100vh;
-color:#6E8A7A;
+color:var(--text);
 }
 
 /* --- พื้นหลังอิโมจิฟุ้งๆ --- */
@@ -46,7 +54,7 @@ height:100%;
 z-index:-1;
 pointer-events:none;
 font-size:24px;
-filter:saturate(0.9);
+filter:blur(.2px);
 }
 
 .floating-emoji{
@@ -73,14 +81,14 @@ z-index:1;
 
 .section{
 background:rgba(255,255,255,0.92);
-backdrop-filter:blur(8px);
 border-radius:24px;
 padding:25px 20px;
 margin-bottom:20px;
-border:1.5px solid #E6F1EA;
+border:1.5px solid #E8F1EC;
+backdrop-filter:blur(10px);
 box-shadow:
-0 10px 24px rgba(201,230,214,0.10),
-0 6px 16px rgba(246,201,212,0.08);
+0 10px 30px rgba(244,201,212,0.10),
+0 8px 18px rgba(221,239,229,0.10);
 }
 
 h1,h2,h3{
@@ -103,16 +111,17 @@ align-items:center;
 }
 
 .logo{
-width:150px;
-height:150px;
+width:155px;
+height:155px;
 border-radius:50%;
 overflow:hidden;
 box-shadow:
-0 10px 25px rgba(246,201,212,0.18),
-0 6px 18px rgba(195,228,208,0.14);
+0 10px 25px rgba(244,201,212,0.16),
+0 8px 18px rgba(221,239,229,0.14);
 border:5px solid rgba(255,255,255,0.95);
 position:relative;
 z-index:2;
+background:#fff;
 }
 
 .logo img{
@@ -125,16 +134,16 @@ object-fit:cover;
 position:absolute;
 font-size:28px;
 animation:pulse 3s infinite ease-in-out;
-filter:drop-shadow(0 4px 10px rgba(255,255,255,0.8));
+filter:drop-shadow(0 3px 8px rgba(255,255,255,.9));
 }
 
 @keyframes pulse{
 0%,100%{
 transform:scale(1);
-opacity:0.75;
+opacity:0.82;
 }
 50%{
-transform:scale(1.18);
+transform:scale(1.2);
 opacity:1;
 }
 }
@@ -148,15 +157,15 @@ margin-bottom:20px;
 }
 
 .badge{
-background:rgba(255,255,255,0.92);
+background:rgba(255,255,255,0.95);
 padding:9px 16px;
 border-radius:30px;
 box-shadow:
-0 4px 12px rgba(246,201,212,0.08),
-0 2px 8px rgba(201,230,214,0.08);
+0 4px 12px rgba(244,201,212,0.08),
+0 3px 10px rgba(221,239,229,0.08);
 font-size:13px;
-color:#8FAF9D;
-border:1px solid #E4F0E7;
+color:#6F8F7B;
+border:1px solid #E6EFEA;
 backdrop-filter:blur(4px);
 }
 
@@ -180,11 +189,11 @@ transform:translateY(-2px);
 }
 
 .btn-outline{
-background:rgba(255,255,255,0.88);
-border:2px dashed #DAB9C4;
-color:#8FAF9D;
+background:rgba(255,255,255,0.9);
+border:2px dashed #E7C3CE;
+color:#6F8F7B;
 box-shadow:
-0 4px 12px rgba(246,201,212,0.08);
+0 4px 12px rgba(244,201,212,0.08);
 }
 
 .status-dot{
@@ -194,7 +203,7 @@ background-color:var(--status-red);
 border-radius:50%;
 display:inline-block;
 animation:dotBlink 1.2s infinite ease-in-out;
-box-shadow:0 0 10px rgba(246,184,199,0.9);
+box-shadow:0 0 10px var(--status-red);
 }
 
 @keyframes dotBlink{
@@ -204,7 +213,7 @@ transform:scale(1);
 }
 50%{
 opacity:0.35;
-transform:scale(1.25);
+transform:scale(1.2);
 }
 100%{
 opacity:1;
@@ -214,14 +223,18 @@ transform:scale(1);
 
 .btn-main{
 background:
-linear-gradient(135deg,#F6C9D4,#DDF3E5);
+linear-gradient(
+135deg,
+#F4C9D4,
+#DDEFE5
+);
 color:#FFFFFF;
 font-size:16px;
 font-weight:500;
 padding:16px 20px;
 box-shadow:
-0 10px 22px rgba(246,201,212,0.14),
-0 8px 20px rgba(201,230,214,0.12);
+0 10px 22px rgba(244,201,212,0.12),
+0 8px 18px rgba(221,239,229,0.10);
 }
 
 .step{
@@ -231,15 +244,19 @@ gap:14px;
 margin-bottom:18px;
 padding:15px 13px;
 border-radius:20px;
-background:rgba(255,255,255,0.85);
-border:1px solid #EAF5EE;
+background:rgba(255,255,255,0.88);
+border:1px solid #EDF5F0;
 box-shadow:
-0 4px 10px rgba(201,230,214,0.06);
+0 4px 12px rgba(221,239,229,0.08);
 }
 
 .step-num{
 background:
-linear-gradient(135deg,#F6C9D4,#DDF3E5);
+linear-gradient(
+135deg,
+#F4C9D4,
+#DDEFE5
+);
 color:#fff;
 width:34px;
 height:34px;
@@ -252,13 +269,13 @@ font-weight:600;
 flex-shrink:0;
 margin-top:2px;
 box-shadow:
-0 4px 12px rgba(246,201,212,0.12);
+0 4px 12px rgba(244,201,212,0.12);
 }
 
 .step div:last-child{
 line-height:1.8;
 font-size:14px;
-color:#698372;
+color:#5E7267;
 word-break:break-word;
 }
 
@@ -269,29 +286,37 @@ justify-content:space-between;
 align-items:center;
 margin-bottom:12px;
 background:
-linear-gradient(135deg,#FFF8FA,#F5FFF8);
+linear-gradient(
+135deg,
+#FFF8FA,
+#F5FFF8
+);
 padding:12px 15px;
 border-radius:18px;
-border-left:4px solid #C7E4D2;
+border-left:4px solid #CFE7DA;
 box-shadow:
-0 3px 10px rgba(201,230,214,0.08);
+0 3px 10px rgba(221,239,229,0.10);
 }
 
 .price-row span{
-color:#7E9C8A;
+color:#6A8575;
 font-weight:500;
 }
 
 .price-tag{
 background:
-linear-gradient(135deg,#F1BECB,#CDE9D7);
+linear-gradient(
+135deg,
+#E8B8C6,
+#CDE7D8
+);
 color:#fff;
 padding:4px 13px;
 border-radius:20px;
 font-size:14px;
 white-space:nowrap;
 box-shadow:
-0 4px 10px rgba(246,201,212,0.12);
+0 4px 10px rgba(244,201,212,0.12);
 }
 
 .footer{
@@ -313,54 +338,57 @@ max-width:120px;
 text-align:center;
 padding:9px;
 border-radius:25px;
-background:rgba(255,255,255,0.92);
+background:#FFFFFF;
 text-decoration:none;
-color:#8FAF9D;
+color:#6F8F7B;
 font-size:13px;
-border:1px solid #E4F0E7;
+border:1px solid #E6EFEA;
 box-shadow:
-0 3px 10px rgba(201,230,214,0.06);
+0 3px 10px rgba(221,239,229,0.06);
 }
 
 .small{
 font-size:12px;
-opacity:.7;
+opacity:.75;
 margin-top:10px;
-color:#8AA393;
+color:#7E9788;
 }
 
 .rule-box{
 background:
-linear-gradient(135deg,#FFF9FB,#F3FFF6);
+linear-gradient(
+135deg,
+#FFF9FB,
+#F5FFF8
+);
 padding:16px;
 border-radius:18px;
 font-size:14px;
 margin-top:15px;
-border:1px dashed #E5C7D0;
-color:#8A9F92;
+border:1px dashed #E4C7D1;
+color:#7A9084;
 line-height:1.9;
 box-shadow:
-0 4px 10px rgba(246,201,212,0.06);
+0 4px 10px rgba(244,201,212,0.06);
 }
 
 .store-title{
-font-size:2.5rem;
+font-size:2.45rem;
 font-weight:500;
 letter-spacing:1px;
-color:#9EB8A8;
+color:#87A392;
 text-shadow:
-0 2px 10px rgba(255,255,255,0.8);
+0 2px 10px rgba(255,255,255,0.9);
 }
 
 .store-subtitle{
-color:#97B0A1;
-opacity:.95;
+color:#7E9A8A;
+opacity:.96;
 margin:14px 0 22px;
 font-size:15px;
 line-height:1.9;
 }
 
-/* responsive */
 @media(max-width:480px){
 
 .container{
@@ -382,8 +410,8 @@ height:180px;
 }
 
 .logo{
-width:135px;
-height:135px;
+width:140px;
+height:140px;
 }
 
 .badge{
@@ -393,6 +421,16 @@ padding:8px 14px;
 
 .btn{
 font-size:14px;
+}
+
+.socials{
+flex-direction:column;
+align-items:center;
+}
+
+.socials a{
+max-width:100%;
+width:100%;
 }
 
 }
@@ -419,7 +457,7 @@ font-size:14px;
 <span class="logo-deco" style="top: 20%; right: 0%;">⭐️</span>
 
 <div class="logo">
-<img src="att.be82oFQlt5Q154biR3LCzBXlgJKcQ_gDr4r5yDftOug.jpeg" alt="logo">
+<img src="IMG_1005.jpeg" alt="logo">
 </div>
 </div>
 
@@ -449,7 +487,9 @@ font-size:14px;
 
 <div class="step">
 <div class="step-num">1</div>
-<div>ดูตัวอย่างงาน บล็อกและตัวตูนจากลิงก์ด้านล่าง</div>
+<div>
+ดูตัวอย่างงาน บล็อกและตัวตูนจากลิงก์ด้านล่าง
+</div>
 </div>
 
 <div class="step">
@@ -462,12 +502,16 @@ font-size:14px;
 
 <div class="step">
 <div class="step-num">3</div>
-<div>โอนเงินเพื่อเริ่มงาน โอน = เริ่มคิว</div>
+<div>
+โอนเงินเพื่อเริ่มงาน โอน = เริ่มคิว
+</div>
 </div>
 
 <div class="step">
 <div class="step-num">4</div>
-<div>รอรับงานภายใน 1-3 วัน (ตามคิว)</div>
+<div>
+รอรับงานภายใน 1-3 วัน (ตามคิว)
+</div>
 </div>
 
 <a href="https://drive.google.com/drive/folders/1IBZCb_gTE7j2CvQw7j2MxGuWsm_lwFtM" class="btn btn-main">
@@ -505,9 +549,13 @@ font-size:14px;
 </div>
 
 <div class="rule-box">
+
 <strong>📍 กฎของร้าน:</strong><br>
+
 • โอนแล้วไม่คืนเงินทุกกรณี<br>
+
 • ยกเลิกหลังจากเช็คงาน = ไม่คืน และส่งงานปกติ
+
 </div>
 
 </div>
@@ -515,10 +563,19 @@ font-size:14px;
 <div class="footer">
 
 <a href="https://lin.ee/Pmkmt0v" class="btn btn-main">
+
 สนใจ สอบถาม ทักเฟสหรือไลน์ได้เลยค่ะ
+
 </a>
 
 <div class="socials">
-<a href="https://www.facebook.com/rin.taw.xwn.rin.phid.trng.hin?">Facebook</a>
-<a href="https://lin.ee/Pmkmt0v">Line Official</a>
-<a href="https://drive.google.com/drive/folders/1iTua1B5bVV9VZ6FXwRDDX
+
+<a href="https://www.facebook.com/rin.taw.xwn.rin.phid.trng.hin?">
+Facebook
+</a>
+
+<a href="https://lin.ee/Pmkmt0v">
+Line Official
+</a>
+
+<a href="https://drive.google.com/drive/folders/1iTua1B5bVV9VZ6FXwRDDX-Nd
